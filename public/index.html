@@ -1,0 +1,166 @@
+<html>
+<head>
+  <base href="/">
+  <title>ChaoticBot</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta property="og:image" content="conversation.svg" />
+  <meta property="og:title" content="ChaoticBot Series - Speed Network" />
+  <meta property="og:description" content="Helping Entrepreneurs to Connect with Other by Location and Time" />
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<header>
+	    <div class="wrapper">
+	      <h1 class="base--h1">
+	      		<a href="/"><img class="base--h1-icon" src="images/chaotic.png" alt="ChaoticBot Avatar">Yo! Discovery Network for Entrepreneurs</a>
+	      </h1>
+	      <div class="top-bar--spacer"></div>
+	      <nav class="top-bar homepage" role="navigation">
+	        <div class="top-bar-menu">
+	          <ul class="main-nav">
+	            <li><a href="https://github.com/urban-coder/chaoticnetwork">Fork on GitHub</a></li>
+	            <li><a href="https://pivotandscale.com/about">About</a></li>
+	          </ul>
+	          <ul class="mobile-nav">
+	            <li class="nav-drawer-toggler" onkeyup='ConversationPanel.menuClicked(event)' onclick='ConversationPanel.menuClicked(event)'>Menu</li>
+	          </ul>
+	        </div>
+	      </nav>
+	          <div class="drawer" tabindex="0">
+    	<div class="drawer-container">
+    		<div class="drawer-title">
+    			<h3>Menu</h3>
+    			<a class="close-drawer">
+    				<img src="images/x.svg" />
+    			</a>
+    		</div>
+    		<div>
+    			<ul class="mobile-main-nav">
+    				<li class="has-dropdown"><a href="https://github.com/urban-coder/chaoticnetwork">Fork on GitHub</a></li>
+	            	<li class="has-dropdown"><a href="https://pivotandscale.com/about">About</a></li>
+    			</ul>
+    		</div>
+    	</div>
+    </div>
+
+
+	    </div>
+  	</header>
+
+	<section class="_full-width-row hide" id='loginSection'>
+	    <div class="_container _container_xx-large">
+	      	<div class="_full-width-row--main main-page">
+      			<h2 class="base--h2">What can I call you?</h2>
+	        	<input type="text" id="textInputName" placeholder="Your Name" class="base--input query-input"></input>
+	        	<h2 class="base--h2 h2-margin">Where are you?</h2>
+	        	<input type="text" id="textInputLocation" placeholder="City, zip or place" class="base--input query-input" onkeydown='ConversationPanel.btnClicked(event)'></input>
+
+	        	<div class="row">
+		          	<button class="base--button base--button_icon-hyperlink location">
+		          		<span class="base--button_icon-hyperlink--link location-text" title='Click to get current location'>get my current location</span>
+		          	</button>
+		        </div>
+
+		        <div class="row center-me">
+		          	<button class="base--button base--button_black chat-button" onclick="ConversationPanel.btnClicked(event)">Let's chat</button>
+		        </div>
+	      	</div>
+	    </div>
+ 	</section>
+
+
+ 	<section class="_full-width-row conversationSection" id='conversationSection'>
+	    <div class="">
+	    	<!--<div id="view-change-button" class="button hide" onclick="PayloadPanel.togglePanel(event, this)">
+		    	<img class="option full" src="../images/chat-button.png">
+		    	<img class="option not-full" src="../images/code-button.png">
+		  	</div>-->
+		  	<div id="contentParent" class="responsive-columns-wrapper">
+		    	<div id="chat-column-holder" class="responsive-column content-column">
+			      <div class="chat-column">
+			        <div id="scrollingChat" class='scrollingChat'></div>
+			        <label for="textInputOne" class="inputOutline">
+			          <input id="textInputOne" class="base--input query-input"
+			            placeholder="Start typing..." type="text"
+			            onkeydown="ConversationPanel.inputKeyDown(event, this)">
+			        </label>
+			        <label for="textInput" class="inputOutline hide">
+			          <input id="textInput" class="base--input query-input"
+			            placeholder="Start typing..." type="text"
+			            onkeydown="ConversationPanel.inputKeyDown(event, this)">
+			        </label>
+			      </div>
+		    	</div>
+		    	<div class="fixed-column content-column">
+					<div class='payload-initial-message channel-header hide'>
+						<!--img class="" src="../images/cloudy.svg"-->
+			        	<div>TRY IT OUT IN OTHER CHANNEL</div>
+			        	<ul class="base--ul base--ul_no-bullets highlights">
+						  <li class="base--li">
+							<img class="icons" src="../images/icon-sms.svg">
+							<a href="#" class="base--a hyperlink">xxx-xxx-xxxx</a>
+						  </li>
+						  <br>
+						  <li class="base--li">
+						  <img class="icons" src="../images/icon-fb.svg">
+						  <a href="#" class="base--a hyperlink">https://www.facebook.com/EvaX.Luo</a>
+						  </li>
+			      	</div>
+					<div class='chat-column'>
+				      	<div class='payload-initial-message'>
+				        	Helping Entrepreneurs Grow Their Business
+				        	<ul class="base--ul base--ul_no-bullets highlights">
+							  <li class="base--li tech-highlights"><a href="https://www.youtube.com/watch?v=xbVQ_kXjIKY" class="base--a hyperlink" target="_blank">9 Signs of a Rookie Entrepreneur</a></li>
+                <li class="base--li tech-highlights"><a href="https://www.youtube.com/watch?v=H-8MPdJR8es" class="base--a hyperlink" target="_blank">An Entrepreneur's Life Changed</a></li>
+                <li class="base--li tech-highlights"><a href="http://www.youngandelite.com/episode-4-dave-rogenmoser/" class="base--a hyperlink" target="_blank">Learn About the Entrepreneur Alliance</a></li>
+                <li class="base--li tech-highlights"><a href="http://ealliance.co/" class="base--a hyperlink" target="_blank">Join the Entrepreneur Alliance</a></li>
+							  <li class="base--li tech-highlights"><a href="https://www.youtube.com/watch?v=gw8UtdFHi70" class="base--a hyperlink" target="_blank">Building Your Business</a></li>
+                <li class="base--li tech-highlights"><a href="https://www.youtube.com/watch?v=OwzX3bRmiZk" class="base--a hyperlink" target="_blank"Mastermind - Join us in Austin</a></li>
+							  <li class="base--li tech-highlights"><a href="https://www.youtube.com/watch?v=SMmccmH6rZs" class="base--a hyperlink" target="_blank">Webinar Bootcamp</a></li>
+                <li class="base--li tech-highlights"><a href="https://www.youtube.com/watch?v=-VKjGIGw3LM" class="base--a hyperlink" target="_blank">Most Powerful Force in Business</a></li>
+                <li class="base--li tech-highlights"><a href="https://www.youtube.com/watch?v=cd58t3qPx3U" class="base--a hyperlink" target="_blank">Making Money Living in a Yurt</a></li>
+                <li class="base--li tech-highlights"><a href="https://www.youtube.com/watch?v=pEZtakSRiSE" class="base--a hyperlink" target="_blank">Getting Your MVP to Market By Booking Calls</a></li>
+
+							</ul>
+				      	</div>
+				    </div>
+			      <div id="payload-initial-message" class="hide"></div>
+			      <div id="payload-initial-message" class="hide"></div>
+			      <div id="payload-request" class="hide"></div>
+			      <div id="payload-response" class="hide"></div>
+		    	</div>
+		  	</div>
+	    </div>
+	</section>
+
+	<footer class="_full-width-row bottom-nav-bar footer">
+	    <div class="_container _container_xx-large">
+	      <div class="">
+	        <nav class="bottom-nav-bar--nav">
+	          <ul class="bottom-nav-bar--nav-ul base--ul base--ul_inline base--ul_no-bullets">
+	            <li class="bottom-nav-bar--nav-li base--li"><a href="https://www.ibm.com/watson/developercloud/" class="base--a bottom-nav-bar--nav-link" target="_blank">Built with IBM Watson</a></li>
+	            <li class="bottom-nav-bar--nav-li base--li"><a href="http://www.ibm.com/watson/developercloud/conversation.html" class="base--a bottom-nav-bar--nav-link" target="_blank">Watson APIs</a></li>
+	          </ul>
+	        </nav>
+	      </div>
+	      <div class="footer-row">
+	        <nav class="bottom-nav-bar--nav">
+	          <ul class="bottom-nav-bar--nav-ul base--ul base--ul_inline base--ul_no-bullets">
+	            <li class="bottom-nav-bar--nav-li base--li"><a href="#" class="base--a bottom-nav-bar--nav-link" target="_blank">ChaoticBots</a></li>
+	          </ul>
+	        </nav>
+	      </div>
+	    </div>
+  	</footer>
+
+  <script src="js/common.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/conversation.js"></script>
+  <script src="js/payload.js"></script>
+  <script src="js/global.js"></script>
+
+</body>
+</html>

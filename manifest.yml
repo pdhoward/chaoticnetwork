@@ -1,0 +1,10 @@
+
+---
+applications:
+- name: chaoticyo
+  memory: 512M
+  instances: 1
+  host: chaoticyo
+  domain: mybluemix.net
+  path: .
+  command: npm start

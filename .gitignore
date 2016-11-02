@@ -1,0 +1,12 @@
+node_modules
+bower_components
+src/bower_components
+npm-debug.log
+coverage
+*DS_Store
+.classpath
+.project
+.env
+config/gmail.js
+config/secrets.js
+config/setup.js
