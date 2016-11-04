@@ -20,6 +20,7 @@
   "dependencies": {
     "async": "^2.0.0",
     "axios": "0.14.0",
+    "badwords": "^1.0.0",
     "bluebird": "^3.4.3",
     "body-parser": "^1.15.1",
     "botkit": "^0.2.2",
